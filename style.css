@@ -1,38 +1,87 @@
-body{
-font-family: "Prata", serif;  
-background-color: rgb(230, 245, 255);
-
+/* Fuente y fondo general */
+body {
+    font-family: "Prata", serif;
+    background: linear-gradient(to bottom, rgb(200, 230, 255), rgb(120, 180, 255));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
-.container{
-    max-width: 60%;
-    margin: 0 auto;
+/* Contenedor principal */
+.container {
+    width: 80%;
+    max-width: 500px;
     padding: 20px;
     text-align: center;
-    background-color:rgb(178, 223, 253) ;
-    box-shadow: 0 2px 4px rgb(93, 92, 92);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
 }
 
-h1{
-    color: white;
+/* Título */
+h1 {
+    color: rgb(0, 102, 204);
+    font-size: 26px;
+    margin-bottom: 10px;
 }
 
-input[type="text"]{
-    padding: 10px;
-    font-size: 18px;
-    width: 70%;
+/* Input y botón */
+input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    width: 80%;
+    border: 2px solid rgb(0, 140, 255);
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
 }
 
-button{
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: rgb(0, 174, 255);
+input[type="text"]:focus {
+    border-color: rgb(255, 180, 0);
+    box-shadow: 0 0 8px rgba(255, 180, 0, 0.5);
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: rgb(0, 140, 255);
     color: white;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
 }
 
-#responseData{
-    margin-top: 20px;
-    font-size: 20px;
+button:hover {
+    background-color: rgb(255, 180, 0);
+    transform: scale(1.05);
 }
+
+/* Resultados */
+#responseData {
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(50, 50, 50);
+}
+
+/* Icono del clima */
+#responseData img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Información del clima */
+h2 {
+    color: rgb(0, 102, 204);
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
